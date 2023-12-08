@@ -25,6 +25,60 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+router.get('/assignment-codes', async (req, res) => {
+  try {
+    const codes = await Assignment.find().select('code');
+    res.json(codes);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+
+
+
+router.get('/latest-assignment-code', async (req, res) => {
+  try {
+    const latestAssignment = await Assignment.findOne().sort({ code: -1 });
+
+    if (!latestAssignment) {
+      return res.status(404).json({ message: 'No assignments found' });
+    }
+
+    res.json({ code: latestAssignment.code });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+router.get('/latest-assignment-employeeid', async (req, res) => {
+  try {
+    const latestAssignmentemp = await Assignment.findOne().sort({ employee_id: -1 });
+
+    if (!latestAssignmentemp) {
+      return res.status(404).json({ message: 'No assignments found' });
+    }
+
+    res.json({ employee_id: latestAssignmentemp.employee_id });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
+
+
+
+
 // get the data of individual assignment
 
 router.get("/:id", async(req,res) => {
