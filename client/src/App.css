@@ -52,6 +52,8 @@ body {
   .menu-icon {
     display: none;
   }
+
+  
   /* End Header  */
   
   /* Sidebar  */
@@ -128,6 +130,7 @@ body {
     /* color: rgba(255, 255, 255, 0.95); */
  
   }
+  
 
 .team-card{
   width: 62rem;
@@ -148,6 +151,7 @@ transition: all 1s;
   padding: 20px;
 }
   
+
   
   /* Medium <= 992px */
     
@@ -192,5 +196,64 @@ transition: all 1s;
   @media screen and (max-width: 576px) {
     .hedaer-left {
       display: none;
+    }
+  }
+
+
+
+
+  /* register form  */
+.register-header{
+  height: 65px;
+  background-color: #c70101f1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.register-container{
+  background-color: #fff7cbcb;
+}
+
+.register{
+  display: flex;
+  align-items: center;
+}
+
+  .right{
+   width: 40%;
+   height: 92vh;
+   display: flex;    flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 0px 15px;
+  }
+
+  .right-img{
+    width: 100%;
+    height: 50vh;
+    /* margin: 10px; */
+    background-image: url('./components/registration/registerImg.jpg');
+    background-size: cover;
+  }
+
+  .left{
+    width: 60%;
+    height: auto;
+    padding: 20px;
+  }
+
+
+
+
+  .rounded-t-5 {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  
+  @media (max-width: 550px) {
+    .rounded-tr-lg-0 {
+      border-top-right-radius: 0.5rem;
+      border-bottom-left-radius: 0rem;
     }
   }

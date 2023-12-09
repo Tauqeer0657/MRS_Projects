@@ -6,7 +6,7 @@ import {
   BsGrid1X2Fill,
   BsFillArchiveFill,
   BsPeopleFill,
-  BsListCheck,
+  // BsListCheck,
   BsMenuButtonWideFill,
   BsFillGearFill,
 } from "react-icons/bs";
@@ -55,12 +55,13 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             <BsPeopleFill className="icon" /> Team
           </li>
         </Link>
-
+        {/* <Link to={"/registration"} style={{ textDecoration: "none", color: "#fff" }}>
         <li className="sidebar-list-item">
-          <a href="/">
-            <BsListCheck className="icon" /> Inventory
-          </a>
+  
+            <BsListCheck className="icon" /> Registration
+        
         </li>
+        </Link> */}
         <li className="sidebar-list-item">
           <a href="/">
             <BsMenuButtonWideFill className="icon" /> Reports

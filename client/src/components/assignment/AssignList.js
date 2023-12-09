@@ -59,6 +59,7 @@ const AssignList = () => {
                                 <th>assign_date</th>
                                 <th>deadline_date</th>
                                 <th>delete</th>
+                                <th>delete</th>
                                 {/* Add more table headers based on your API response */}
                             </tr>
                         </thead>
@@ -73,7 +74,7 @@ const AssignList = () => {
                                     <td>{item.to}</td>
                                     <td>{moment(item.assign_date).format('DD/MM/YYYY')}</td>
                                     <td>{moment(item.deadline_date).format('DD/MM/YYYY')}</td>
-
+                                    <td style={{textAlign:"center"}}><i class="fa-solid fa-pen-to-square" style={{cursor:"pointer", color:"#0084ff", fontSize:"16px"}}></i></td>
                                     <td style={{textAlign:"center"}}><i class="fa-solid fa-trash-can" style={{cursor:"pointer", color:"red", fontSize:"16px"}} onClick={() => handleDelete(item._id)}></i></td>
           
                                 </tr>
