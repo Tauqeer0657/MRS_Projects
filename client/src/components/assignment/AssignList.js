@@ -74,8 +74,13 @@ const AssignList = () => {
                                     <td>{item.to}</td>
                                     <td>{moment(item.assign_date).format('DD/MM/YYYY')}</td>
                                     <td>{moment(item.deadline_date).format('DD/MM/YYYY')}</td>
+<<<<<<< HEAD
                                     <td style={{textAlign:"center"}}><i class="fa-solid fa-pen-to-square" style={{cursor:"pointer", color:"#0084ff", fontSize:"16px"}}></i></td>
                                     <td style={{textAlign:"center"}}><i class="fa-solid fa-trash-can" style={{cursor:"pointer", color:"red", fontSize:"16px"}} onClick={() => handleDelete(item._id)}></i></td>
+=======
+
+                                    <td style={{textAlign:"center"}}><i className="fa-solid fa-trash-can" style={{cursor:"pointer", color:"red", fontSize:"16px"}} onClick={() => handleDelete(item._id)}></i></td>
+>>>>>>> c769363291aad39896cd4b84af3b770132f48a68
           
                                 </tr>
                             ))}

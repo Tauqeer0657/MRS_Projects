@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import Assignment from "./components/assignment/Assignment";
 import Task from "./components/Task";
 
+
 function App() {
   const location = useLocation();
   const isLoginPage = location.pathname === "/auth/login";
@@ -24,6 +25,7 @@ function App() {
   };
 
   return (
+<<<<<<< HEAD
     <div>
       {shouldRenderHeaderAndSidebar && (
         <div className="grid-container">
@@ -46,6 +48,22 @@ function App() {
       
       <Routes>
         <Route path="/auth/*" element={<AuthenticationRoutes />} />
+=======
+    <div className="grid-container">
+     
+      <Header OpenSidebar={OpenSidebar} />
+      <Sidebar
+        openSidebarToggle={openSidebarToggle}
+        OpenSidebar={OpenSidebar}
+      />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/assignment" element={<Assignment />} />
+        <Route path="/task" element={<Task />} />
+        <Route path="/team" element={<Team />} />
+        
+        
+>>>>>>> c769363291aad39896cd4b84af3b770132f48a68
       </Routes>
     </div>
   );

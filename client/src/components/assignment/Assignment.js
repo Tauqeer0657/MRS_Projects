@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useEffect, useState } from "react";
 // import Button from "react-bootstrap/Button";
 // // import Col from 'react-bootstrap/Col';
@@ -292,6 +293,23 @@ const AssignmentModal = ({ show, onHide }) => {
     deadline_date: "",
   });
 
+=======
+import React, { useEffect, useState } from "react";
+import { Button, Container, Modal } from "react-bootstrap";
+import AssignList from "./AssignList";
+
+const AssignmentModal = ({ show, onHide }) => {
+  const [formData, setFormData] = useState({
+    code: "",
+    employee_id: "",
+    assignment: "",
+    from: "",
+    to: "",
+    assign_date: "",
+    deadline_date: "",
+  });
+
+>>>>>>> c769363291aad39896cd4b84af3b770132f48a68
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState(null);
 
@@ -375,7 +393,11 @@ const AssignmentModal = ({ show, onHide }) => {
   return (
     <Modal show={show} onHide={onHide} aria-labelledby="contained-modal-title-vcenter" size="xl">
       <Modal.Header closeButton>
+<<<<<<< HEAD
         <Modal.Title id="contained-modal-title-vcenter">Create Assignment</Modal.Title>
+=======
+        <Modal.Title id="contained-modal-title-vcenter">Give Assignment</Modal.Title>
+>>>>>>> c769363291aad39896cd4b84af3b770132f48a68
       </Modal.Header>
       <Modal.Body className="grid-example">
         <Container>
@@ -384,7 +406,11 @@ const AssignmentModal = ({ show, onHide }) => {
               <div className="row">
                 <div className="mb-3 col">
                   <label htmlFor="exampleInputEmail1" className="form-label">
+<<<<<<< HEAD
                     Task No.:
+=======
+                    Code:
+>>>>>>> c769363291aad39896cd4b84af3b770132f48a68
                   </label>
                   <input
                     type="text"
@@ -544,9 +570,12 @@ const Assignment = () => {
 };
 
 export default Assignment;
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> c769363291aad39896cd4b84af3b770132f48a68
